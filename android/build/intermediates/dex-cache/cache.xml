@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/zijx/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/okio-1.6.0-5f31954deb5ac64077ca5342318d1ce9c07690f5.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/.gradle/caches/modules-2/files-2.1/com.facebook.stetho/stetho-okhttp/1.2.0/6c5c9380e245c4ff5be2b2a49dcbb0200c39798e/stetho-okhttp-1.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6c5c9380e245c4ff5be2b2a49dcbb0200c39798e">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/stetho-okhttp-1.2.0-333d6028e041b27bc005a7c2054a79a87ad76c54.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/develop/iPlan/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/classes-498cc2531b5bcedb5920a0e165eeca9c85155c8e.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/develop/iPlan/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/classes-c16a133a36045e683ddadfd1faf91a8f1bd4e394.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-ws/2.5.0/e9753b7dcae5deca92e871c5c759067070b07bc/okhttp-ws-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0e9753b7dcae5deca92e871c5c759067070b07bc">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-2.5.0-1142b33b495eb653ce61326ba6486d69783fe535.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/develop/iPlan/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.17.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9686d4e1f88cf0c23f450f45d914d45d366711c5">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/classes-fc5f700cac2d7c45de7127662bdcd5b4a61d2d4e.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0-0766aac24caf01cbe41de76b43f756ba5ea23cac.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.3/1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14/jackson-core-2.2.3.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.3-4765ed29c95f94f30142026d6955f8b6e47b40bd.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/develop/iPlan/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/classes-8e2b55d68932e0098cd22711273e4f9dd2185c84.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/develop/iPlan/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-f02d72620718e237f6ff2c91d8f479a8f276aa44.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/develop/iPlan/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.8.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3836ecca4e31e18ea8fbae8e822d49777b0db4f7">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/classes-6ea990eaa18cb96686dc1ad4bb386334a55d8f93.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/.gradle/caches/modules-2/files-2.1/com.facebook.stetho/stetho/1.2.0/1d6cdb8ce8185b8b23213fad48a83987fb6d2d67/stetho-1.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1d6cdb8ce8185b8b23213fad48a83987fb6d2d67">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/stetho-1.2.0-e9449c2d1e85e4bdc3e56a447a4956445f8faa1e.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/develop/iPlan/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp/0.8.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0d5d69b03cb7d68b81543f6483ed04ccb0e2235b">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/classes-7a67b5f38cbbc7ce3bffdf1bc2d0636470ec7bd8.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/develop/iPlan/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.8.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9178570a3a28c95fabd3bc746cd68efe99ad2b47">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/classes-3b5f55e0b4d2d3d9d36fc54520bf7314f2f76c0c.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/develop/iPlan/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.8.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4af24c040b21980e0a80a505816c648e36705bd9">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/classes-f31f7b6e2839a2317294aad1ed333f554e4bf7d1.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/develop/iPlan/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.17.1/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0b5e946b76cdb1f00b18f2981e7d997141a66c9f">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5-6e060b2e5bd65ea3e30de18f9d2444ee6b6415a4.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.5.0/4de2b4ed3445c37ec1720a7d214712e845a24636/okhttp-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/okhttp-2.5.0-81895a9572504a4c1b19a62f147965291a9901ab.jar" />
+    </item>
+    <item
+        jar="/usr/local/opt/android-sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-83cbd8867bbfafb64844edcdc4bcc0a8099d3359.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.2/2bf96b7aa8b611c177d329452af1dc933e14501c/commons-cli-1.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/commons-cli-1.2-a414a0ac2a6e1534cef182f3bbcdd1ee1bd3fc7f.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.4/129874135e6081269ace2312092031558865de12/bolts-android-1.1.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-d5f55d582da5eff51043916d3c349db58f191cff.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/library-2.4.0-aa2fa7833c81c2e729b984615f4179fe76522b89.jar" />
+    </item>
+    <item
+        jar="/Users/zijx/develop/iPlan/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.8.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="845a5b3a624946b2068963ba656c117fc453701c">
+        <dex dex="/Users/zijx/develop/iPlan/android/app/build/intermediates/pre-dexed/debug/classes-d3f8a4a0a96c2d5ba16cd99654ca50bd1865d57f.jar" />
+    </item>
+
+</items>
