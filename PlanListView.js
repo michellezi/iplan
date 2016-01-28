@@ -55,6 +55,7 @@ Log.id = 1;
 var DefaultPlans = [new Plan('2016年度计划',1451577600,1483113600),new Plan('Plan 2',1451577600,1483113600)];
 var DefaultGoals = [new Goal('国内旅行',3,'次',1),new Goal('做家务',10,'次',1),new Goal('骑行',100,'公里',1)];
 var DefaultLogs = [new Log('五一桂林旅游',1,1),new Log('圣诞武汉游',1,1),new Log('扫地',1,2),new Log('周六清晨五缘湾骑行',15,3)];
+var EmptyGoal = new Goal('',0,'',0);
 
 function makeDataBlob () {
     var dataBlob = {};
@@ -62,10 +63,9 @@ function makeDataBlob () {
     var rowIDs = [];
 
     var addEmptyRow = (index, planId) => {
-	    var goal = new Goal('',0,'',0);
-  		var rowId = 'P '+planId+',R '+goal.id;
+  		var rowId = 'P '+planId+',R '+EmptyGoal.id;
         rowIDs[index].push(rowId);
-        dataBlob[rowId] = goal;
+        dataBlob[rowId] = EmptyGoal;
 	};
 
     for (var ii = 0; ii < DefaultPlans.length; ii++) {
@@ -89,6 +89,7 @@ function makeDataBlob () {
 		        rowIDs[ii].push(rowId);
 		        dataBlob[rowId] = goal;
 	      	}
+	      	
       	};
     }
     return [dataBlob,sectionIDs,rowIDs];
@@ -174,12 +175,10 @@ export default class PlanListView extends Component {
 	    };
 
 	    var rowHasChanged = (r1, r2) => {
-			console.log('_rowHasChanged');
 		    return r1.id === r2.id && r1.desc === r2.desc;
 		};
 
 		var sectionHeaderHasChanged = (s1,s2) => {
-			console.log('_sectionHeaderHasChanged');
 	  		return (s1.title === s2.title) && (s1.startTime === s2.startTime) && (s1.folded === s2.folded);
 		}
 
@@ -193,9 +192,6 @@ export default class PlanListView extends Component {
 	    var results = makeDataBlob();
 	    this.state = {
 	      	dataSource: dataSource.cloneWithRowsAndSections(results[0],results[1],results[2]),
-	      	dataBlob: results[0],
-	      	sectionIDs: results[1],
-	      	rowIDs: results[2],
 	    };
 	}
 
@@ -239,31 +235,26 @@ export default class PlanListView extends Component {
 		};
   	}
 
-  	_pressHeader(sectionData) {
-  		console.log('press header '+sectionData.folded);
-  		sectionData.folded = !sectionData.folded;
-  		var ds = this.state.dataSource;
-  		var results = makeDataBlob();
-	    this.setState({
-	      	dataSource: ds.cloneWithRowsAndSections(results[0],results[1],results[2]),
-	    });
-  	}
-
-  	_pressDelete(sectionData) {
-
-  	}
-
-  	_pressAddGoal(sectionData) {
-  		
-  	}
-
   	renderRow(rowData,sectionID,rowID) {
-  		console.log('renderRow '+rowData.planId);
+  		console.log('renderRow '+rowData.planId+' '+rowData.id);
   		if (rowData.planId > 0) {
+  			var logComponents = [];
+  			var logs = DefaultLogs.filter(function (elog) {
+  				return elog.goalId === rowData.id;
+  			});
+  			for (var i = 0; i < logs.length; i++) {
+  				if (logs[i].num < 0) {
+  					logComponents.push(<Text style={styles.logDesc}>{'撤销 '+logs[i].desc+' '+logs[i].num+' '+rowData.unit}</Text>);
+  				} else {
+  					logComponents.push(<Text style={styles.logDesc}>{logs[i].desc+' '+logs[i].num+' '+rowData.unit}</Text>);
+  				}
+  				
+  			};
 	    	return (
 	    		<View style={styles.goalContainer}>
 	    			<View style={{flex:1}}>
 	      				<Text style={styles.goalDesc}>{rowData.desc+' '+rowData.total+' '+rowData.unit}</Text>
+	      				{logComponents}
 	    			</View>
 	    			<View style={styles.goalContainer}>
 	    				<Image source={require('./images/circle.png')} style={styles.goalButton} />
@@ -276,6 +267,11 @@ export default class PlanListView extends Component {
   		}
   	}
 
+  	renderSeparator(sectionID, rowID, adjacentRowHighlighted) {
+  		console.log('renderSeparator '+sectionID+"－"+rowID);
+  		return (<View style={styles.line}></View>);
+  	}
+
 	render() {
 		return (
 	      	<ListView
@@ -283,11 +279,31 @@ export default class PlanListView extends Component {
 	      		initialListSize={10}
 		        style={styles.listview}
 		        dataSource={this.state.dataSource}
-		        onChangeVisibleRows={(visibleRows, changedRows) => console.log({visibleRows, changedRows})}
+		        onChangeVisibleRows={(visibleRows, changedRows) => console.log({visibleRows})}
 		        renderSectionHeader={this.renderSectionHeader.bind(this)}
+		        renderSeparator={this.renderSeparator.bind(this)}
 		        renderRow={this.renderRow.bind(this)}/>
     	);
 	}
+
+	_pressHeader(sectionData) {
+  		console.log('press header '+sectionData.folded);
+  		sectionData.folded = !sectionData.folded;
+  		var ds = this.state.dataSource;
+  		var results = makeDataBlob();
+  		console.log(results);
+	    this.setState({
+	      	dataSource: ds.cloneWithRowsAndSections(results[0],results[1],results[2]),
+	    });
+  	}
+
+  	_pressDelete(sectionData) {
+
+  	}
+
+  	_pressAddGoal(sectionData) {
+  		
+  	}
 
 }
 
@@ -341,12 +357,18 @@ var styles = StyleSheet.create({
   	},
   	logDesc: {
     	fontSize: 14,
-    	color: '#b8b8b8',
+    	color: '#787878',
+    	paddingLeft: 16,
+    	paddingBottom: 5,
   	},
   	separator: {
 	    height: 1,
 	    backgroundColor: '#ffffff',
 	    marginLeft: 0,
+  	},
+  	line: {
+  		height: 0.5,
+	    backgroundColor: '#b8b8b8',
   	},
   	container: {
   		flex: 1,

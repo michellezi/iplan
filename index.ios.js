@@ -40,8 +40,7 @@ class iPlan extends Component {
         style={styles.container}
         initialRoute={{
           component: PlanListView,
-          title: 'My View Title',
-          passProps: { myProp: 'foo' },
+          title: '我的计划',
         }}/>
     );
   }
