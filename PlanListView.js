@@ -117,54 +117,15 @@ import React, {
 	TouchableOpacity,
 	View,
 	Component,
+	TextInput,
+	DatePickerIOS,
 } from 'react-native';
 
 import NativeModules, {
 	UIManager,
 } from 'NativeModules'
 
-class PlanHeader extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {plan: props.plan};
-	}
-  	componentWillMount () {
-    	UIManager.setLayoutAnimationEnabledExperimental &&
-      		UIManager.setLayoutAnimationEnabledExperimental(true);
-  	}
-  	_onPressHeader () {
-    	this.state.plan.folded = !this.state.plan.folded;
-    	this.setState({plan:this.state.plan}); //, needsUpdate:true
-    	console.log('_onPressHeader '+this.state.plan.folded);
-  	}
-  	render () {
-		var plan = this.state.plan;
-		if (!plan) {
-			return (<View></View>);
-		};
-      	if (plan.folded === true) {
-			return (
-				<TouchableOpacity onPress={this._onPressHeader.bind(this)}>
-		    		<View style={styles.section}>
-		    			<Image source={require('./images/arrow-right.png')} style={styles.arrowRight} />
-		      			<Text style={styles.planTitle}>{plan.title}</Text>
-		      		</View>
-      			</TouchableOpacity>
-	    	);
-		} else {
-	    	return (
-	    		<TouchableOpacity onPress={this._onPressHeader.bind(this)}>        	
-		    		<View style={styles.section}>
-		    			<Image source={require('./images/arrow-down.png')} style={styles.arrowDown} />
-		      			<Text style={styles.planTitle}>{plan.title}</Text>
-		      		</View>
-      			</TouchableOpacity>
-	    	);
-		};	    	
-  	}
-}
-
-export default class PlanListView extends Component {
+class PlanListView extends Component {
 	constructor (props) {
 		super(props);
 		var getSectionData = (dataBlob, sectionID) => {
@@ -179,7 +140,7 @@ export default class PlanListView extends Component {
 		};
 
 		var sectionHeaderHasChanged = (s1,s2) => {
-	  		return (s1.title === s2.title) && (s1.startTime === s2.startTime) && (s1.folded === s2.folded);
+	  		return s1.isEqual(s2);
 		}
 
 	    var dataSource = new ListView.DataSource({
@@ -272,6 +233,11 @@ export default class PlanListView extends Component {
   		return (<View style={styles.line}></View>);
   	}
 
+  	renderHeader() {
+  		console.log('renderHeader');
+  		return (<View/>);
+  	}
+
 	render() {
 		return (
 	      	<ListView
@@ -282,7 +248,8 @@ export default class PlanListView extends Component {
 		        onChangeVisibleRows={(visibleRows, changedRows) => console.log({visibleRows})}
 		        renderSectionHeader={this.renderSectionHeader.bind(this)}
 		        renderSeparator={this.renderSeparator.bind(this)}
-		        renderRow={this.renderRow.bind(this)}/>
+		        renderRow={this.renderRow.bind(this)}
+		        renderHeader={this.renderHeader.bind(this)}/>
     	);
 	}
 
@@ -307,9 +274,76 @@ export default class PlanListView extends Component {
 
 }
 
+class CreatePlan extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			title: props.title || '',
+			startTime: props.startTime || 0,
+			endTime: props.endTime || 0,
+			date: new Date(),
+      		timeZoneOffsetInHours: (-1) * (new Date()).getTimezoneOffset() / 60,
+		};
+	}
+
+	componentDidMount() {
+
+	}
+
+	_onStateChange(date) {
+
+	}
+
+	render() {
+		console.log('create plan render:'+this.state.date);
+		return (
+			<View style={styles.navComponent}>
+				<View style={styles.container2}>
+					<Text style={styles.inputLabel}>标       题</Text>
+					<View style={styles.container}>
+						<TextInput autoFocus={true}
+			          	style={styles.textInput}
+			          	onChangeText={(text) => {
+			            	this.setState({title:text});
+			          	}}>
+			        	</TextInput>
+			        	<View style={styles.line}/>
+		        	</View>
+		        </View>
+		        <View style={styles.container2}>
+					<Text style={styles.inputLabel}>开始时间</Text>
+					<View style={styles.container}>
+						<DatePickerIOS
+						  date={new Date()}
+						  minuteInterval={1}
+						  mode={'datetime'}
+						  onDateChange={this._onStateChange.bind(this)} />
+			        	<View style={styles.line}/>
+		        	</View>
+		        </View>
+		        <View style={styles.container2}>
+					<Text style={styles.inputLabel}>结束时间</Text>
+					<View style={styles.container}>
+						<DatePickerIOS
+						  date={new Date()}
+						  minuteInterval={1}
+						  mode={'datetime'}
+						  onDateChange={this._onStateChange.bind(this)} />
+										       				        
+			        	<View style={styles.line}/>
+		        	</View>
+		        </View>
+			</View>
+		);
+	}
+}
+
 var styles = StyleSheet.create({
   	listview: {
     	backgroundColor: '#ffffff',
+  	},
+  	listheader: {
+  		height: 44,
   	},
   	section: {
   		flex: 1,
@@ -383,4 +417,27 @@ var styles = StyleSheet.create({
   		color: '#8080d0',
 	    paddingHorizontal: 8,
   	},
+  	navComponent: {
+  		marginTop: 64,
+  	},
+  	textInput: {
+	    flex: 1,
+	    fontSize: 14,
+	    height: 50,
+	    padding: 4,
+	    // marginBottom: 4,
+  	},
+  	inputLabel: {
+  		fontSize: 14,
+    	color: '#000000',
+  	},
+  	container2: {
+  		flex: 1,
+  		padding: 8,
+  		flexDirection: 'row',
+  		alignItems: 'center',
+  	},
 });
+
+exports.PlanListView = PlanListView;
+exports.CreatePlan = CreatePlan;
