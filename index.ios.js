@@ -12,18 +12,28 @@ var {
   Component,
 } = React;
 
-var exps = require('./PlanListView.js');
+import CreatePlan from './CreatePlan.js'
+import PlanListView from './PlanListView.js'
 
 class iPlan extends Component {
+
   _onRightButtonPress() {
-    console.log('onRightButtonPress');
     this.refs['navigator'].push({
-      title: '新建计划',
-      component: exps.CreatePlan,
-      // leftButtonIcon: require('./images/btn-back.png'),
-      backButtonTitle: '取消',
-      // onLeftButtonPress: () => this.refs['navigator'].pop(),
+      component: CreatePlan,
+      navigationBarHidden: true,
     });
+  }
+
+  componentWillReceiveProps (nextProps) {
+    console.log('iPlan componentWillReceiveProps',nextProps.dataBlobs);
+  }
+
+  componentWillUpdateProps () {
+    console.log('iPlan componentWillUpdateProps',this.props);
+  }
+
+  componentWillMount () {
+    console.log('iPlan componentWillMount',this.props);
   }
 
   render() {
@@ -32,10 +42,10 @@ class iPlan extends Component {
         ref='navigator'
         style={styles.container}
         initialRoute={{
-          component: exps.PlanListView,
+          component: PlanListView,
           title: '我的计划',
-          rightButtonIcon: require('./images/btn-back.png'),
-          passProps: { myProp: 'foo' },
+          rightButtonTitle: '新建',
+          passProps: this.props,
           onRightButtonPress: this._onRightButtonPress.bind(this),
         }}/>
     );
@@ -46,6 +56,7 @@ var styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  
 });
 
 AppRegistry.registerComponent('iPlan', () => iPlan);

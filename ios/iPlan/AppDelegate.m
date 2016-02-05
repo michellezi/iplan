@@ -8,7 +8,7 @@
  */
 
 #import "AppDelegate.h"
-
+#import "DataManager.h"
 #import "RCTRootView.h"
 
 @implementation AppDelegate

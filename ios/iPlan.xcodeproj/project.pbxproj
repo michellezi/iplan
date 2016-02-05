@@ -22,6 +22,16 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		B70CE4461C62F359009C2819 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B70CE4451C62F359009C2819 /* DataManager.m */; };
+		B70CE4651C62F3BE009C2819 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B70CE4541C62F3BE009C2819 /* FMDatabase.m */; };
+		B70CE4661C62F3BE009C2819 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B70CE4561C62F3BE009C2819 /* FMDatabaseAdditions.m */; };
+		B70CE4671C62F3BE009C2819 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B70CE4581C62F3BE009C2819 /* FMDatabasePool.m */; };
+		B70CE4681C62F3BE009C2819 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B70CE45A1C62F3BE009C2819 /* FMDatabaseQueue.m */; };
+		B70CE4691C62F3BE009C2819 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B70CE45D1C62F3BE009C2819 /* FMResultSet.m */; };
+		B70CE46A1C62F3BE009C2819 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70CE4601C62F3BE009C2819 /* SVIndefiniteAnimatedView.m */; };
+		B70CE46B1C62F3BE009C2819 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B70CE4621C62F3BE009C2819 /* SVProgressHUD.bundle */; };
+		B70CE46C1C62F3BE009C2819 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B70CE4641C62F3BE009C2819 /* SVProgressHUD.m */; };
+		B70CE46E1C6320DD009C2819 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B70CE46D1C6320DD009C2819 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +135,26 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		B70CE4441C62F359009C2819 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = iPlan/DataManager.h; sourceTree = "<group>"; };
+		B70CE4451C62F359009C2819 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = iPlan/DataManager.m; sourceTree = "<group>"; };
+		B70CE4531C62F3BE009C2819 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		B70CE4541C62F3BE009C2819 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		B70CE4551C62F3BE009C2819 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		B70CE4561C62F3BE009C2819 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		B70CE4571C62F3BE009C2819 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		B70CE4581C62F3BE009C2819 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		B70CE4591C62F3BE009C2819 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		B70CE45A1C62F3BE009C2819 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		B70CE45B1C62F3BE009C2819 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		B70CE45C1C62F3BE009C2819 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		B70CE45D1C62F3BE009C2819 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		B70CE45F1C62F3BE009C2819 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		B70CE4601C62F3BE009C2819 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		B70CE4611C62F3BE009C2819 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		B70CE4621C62F3BE009C2819 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		B70CE4631C62F3BE009C2819 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		B70CE4641C62F3BE009C2819 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		B70CE46D1C6320DD009C2819 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70CE46E1C6320DD009C2819 /* libsqlite3.0.tbd in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -231,8 +262,11 @@
 		13B07FAE1A68108700A75B9A /* iPlan */ = {
 			isa = PBXGroup;
 			children = (
+				B70CE4511C62F3BE009C2819 /* ThirdLibs */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				B70CE4441C62F359009C2819 /* DataManager.h */,
+				B70CE4451C62F359009C2819 /* DataManager.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -285,6 +319,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				B70CE46D1C6320DD009C2819 /* libsqlite3.0.tbd */,
 				13B07FAE1A68108700A75B9A /* iPlan */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* iPlanTests */,
@@ -301,6 +336,47 @@
 				00E356EE1AD99517003FC87E /* iPlanTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B70CE4511C62F3BE009C2819 /* ThirdLibs */ = {
+			isa = PBXGroup;
+			children = (
+				B70CE4521C62F3BE009C2819 /* FMDB */,
+				B70CE45E1C62F3BE009C2819 /* SVProgressHUD */,
+			);
+			name = ThirdLibs;
+			path = iPlan/ThirdLibs;
+			sourceTree = "<group>";
+		};
+		B70CE4521C62F3BE009C2819 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				B70CE4531C62F3BE009C2819 /* FMDatabase.h */,
+				B70CE4541C62F3BE009C2819 /* FMDatabase.m */,
+				B70CE4551C62F3BE009C2819 /* FMDatabaseAdditions.h */,
+				B70CE4561C62F3BE009C2819 /* FMDatabaseAdditions.m */,
+				B70CE4571C62F3BE009C2819 /* FMDatabasePool.h */,
+				B70CE4581C62F3BE009C2819 /* FMDatabasePool.m */,
+				B70CE4591C62F3BE009C2819 /* FMDatabaseQueue.h */,
+				B70CE45A1C62F3BE009C2819 /* FMDatabaseQueue.m */,
+				B70CE45B1C62F3BE009C2819 /* FMDB.h */,
+				B70CE45C1C62F3BE009C2819 /* FMResultSet.h */,
+				B70CE45D1C62F3BE009C2819 /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		B70CE45E1C62F3BE009C2819 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B70CE45F1C62F3BE009C2819 /* SVIndefiniteAnimatedView.h */,
+				B70CE4601C62F3BE009C2819 /* SVIndefiniteAnimatedView.m */,
+				B70CE4611C62F3BE009C2819 /* SVProgressHUD-Prefix.pch */,
+				B70CE4621C62F3BE009C2819 /* SVProgressHUD.bundle */,
+				B70CE4631C62F3BE009C2819 /* SVProgressHUD.h */,
+				B70CE4641C62F3BE009C2819 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				B70CE46B1C62F3BE009C2819 /* SVProgressHUD.bundle in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,7 +618,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				B70CE4671C62F3BE009C2819 /* FMDatabasePool.m in Sources */,
+				B70CE46A1C62F3BE009C2819 /* SVIndefiniteAnimatedView.m in Sources */,
+				B70CE4461C62F359009C2819 /* DataManager.m in Sources */,
+				B70CE4681C62F3BE009C2819 /* FMDatabaseQueue.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				B70CE4651C62F3BE009C2819 /* FMDatabase.m in Sources */,
+				B70CE46C1C62F3BE009C2819 /* SVProgressHUD.m in Sources */,
+				B70CE4691C62F3BE009C2819 /* FMResultSet.m in Sources */,
+				B70CE4661C62F3BE009C2819 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
